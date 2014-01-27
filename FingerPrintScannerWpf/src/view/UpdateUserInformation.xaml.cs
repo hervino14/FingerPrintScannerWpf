@@ -36,8 +36,7 @@ namespace FingerPrintScanner.src.view {
             InitializeComponent() ;
             this.dashboard_obj = null ;
             XamlEntityDesignerReference.designNewMenu( this.menu1 ) ;
-            this.initAllObjects() ;
-            this.setInformation() ;
+            this.initAllObjects() ;            
         }
 
         private void initAllObjects() {
@@ -49,9 +48,8 @@ namespace FingerPrintScanner.src.view {
             int i , sz , fl ;
             string[,] arr = this.uh.getAllUserInfo() ;
             sz = this.uh.getDataSize() ;
-            fl = 0 ;
-            System.Windows.Forms.MessageBox.Show( user_id ) ;
-            /*for( i = 0 ; i < sz ; i++ ) {
+            fl = 0 ;            
+            for( i = 0 ; i < sz ; i++ ) {
                 if( this.user_id.CompareTo( arr[ i , 0 ] ) == 0 ) {
                     fl = 1 ;
                     break ;
@@ -61,8 +59,13 @@ namespace FingerPrintScanner.src.view {
                 tbx7.Text = arr[ i , 0 ] ;
                 tbx1.Text = arr[ i , 1 ] ;
                 tbx2.Text = arr[ i , 2 ] ;
-            }
-            */
+                tbx3.Text = arr[ i , 3 ] ;
+                dtp1.Text = arr[ i , 4 ] ;
+                tbx4.Text = arr[ i , 5 ] ;
+                tbx5.Text = arr[ i , 6 ] ;
+                tbx6.Text = arr[ i , 7 ] ;
+                dtp2.Text = arr[ i , 8 ] ;
+            }            
         }
 
         private void Window_Closed( object sender , EventArgs e ) {
@@ -177,17 +180,32 @@ namespace FingerPrintScanner.src.view {
 
         public void exitClick( Object o , EventArgs ea ) {
             this.Close();
+        }        
+
+        public void setUserId( string user_id_param ) {
+            this.user_id = user_id_param ;
+            this.setInformation() ;
         }
 
         private void Button_Click( object sender , RoutedEventArgs e ) {
-
+            string[] brr;
+            brr = new string[ 20 ];
+            brr[ 0 ] = this.tbox7.Text;
+            brr[ 1 ] = this.tbx1.Text;
+            brr[ 2 ] = this.tbx2.Text;
+            brr[ 3 ] = this.tbx3.Text;
+            brr[ 4 ] = this.tbx4.Text;
+            brr[ 5 ] = this.dtp1.Text;
+            brr[ 6 ] = this.tbx5.Text;
+            brr[ 7 ] = this.tbx6.Text;
+            brr[ 8 ] = this.tbx6.Text;
+            this.uh.updateUser( brr );
+            System.Windows.MessageBox.Show( "User Information Updated Successfully!" );
+            this.dashboard_obj.Visibility = Visibility.Visible;
+            this.Visibility = Visibility.Hidden;
         }
 
-        private void Button_Click_1( object sender , RoutedEventArgs e ) {            
-        }
-
-        public void setUserId( string user_id_param ) {
-            this.user_id = user_id_param ;            
+        private void Button_Click_1( object sender , RoutedEventArgs e ) {
         }
     }
 }
