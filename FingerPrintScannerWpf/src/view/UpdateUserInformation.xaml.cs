@@ -188,18 +188,18 @@ namespace FingerPrintScanner.src.view {
         }
 
         private void Button_Click( object sender , RoutedEventArgs e ) {
-            string[] brr;
-            brr = new string[ 20 ];
-            brr[ 0 ] = this.tbox7.Text;
-            brr[ 1 ] = this.tbx1.Text;
-            brr[ 2 ] = this.tbx2.Text;
-            brr[ 3 ] = this.tbx3.Text;
-            brr[ 4 ] = this.tbx4.Text;
-            brr[ 5 ] = this.dtp1.Text;
-            brr[ 6 ] = this.tbx5.Text;
-            brr[ 7 ] = this.tbx6.Text;
-            brr[ 8 ] = this.tbx6.Text;
-            this.uh.updateUser( brr );
+            string[] brr ;
+            brr = new string[ 20 ] ;
+            brr[ 0 ] = this.tbx7.Text ;
+            brr[ 1 ] = this.tbx1.Text ;
+            brr[ 2 ] = this.tbx2.Text ;
+            brr[ 3 ] = this.tbx3.Text ;
+            brr[ 4 ] = this.tbx4.Text ;
+            brr[ 5 ] = this.dtp1.Text ;
+            brr[ 6 ] = this.tbx5.Text ;
+            brr[ 7 ] = this.tbx6.Text ;
+            brr[ 8 ] = this.dtp2.Text ;
+            this.uh.updateUser( brr ) ;
             System.Windows.MessageBox.Show( "User Information Updated Successfully!" );
             this.dashboard_obj.Visibility = Visibility.Visible;
             this.Visibility = Visibility.Hidden;

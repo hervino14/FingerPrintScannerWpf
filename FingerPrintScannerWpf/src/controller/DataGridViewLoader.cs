@@ -56,12 +56,12 @@ namespace FingerPrintScanner.src.controller {
                 }
             }
             else if( data_grid_bind_id == 3 ) {
-                List<ThreeColumns> list_data = new List<ThreeColumns>() ;
+                List<TypeThree> list_data = new List<TypeThree>();
                 for( i = 0 ; i < row_cn ; i++ ) {
-                    list_data.Add( new ThreeColumns() {
-                        FirstColumn = data[ i , 0 ] ,
-                        SecondColumn = data[ i , 1 ] ,
-                        ThirdColumn = data[ i , 2 ] 
+                    list_data.Add( new TypeThree() {
+                        UserFullName = data[ i , 0 ] ,
+                        JobDesignation = data[ i , 1 ] ,
+                        EntryTime = data[ i , 2 ] 
                     } ) ;
                     dgv.ItemsSource = list_data ;
                 }
@@ -153,16 +153,16 @@ namespace FingerPrintScanner.src.controller {
             }            
         }
 
-        public class ThreeColumns {
-            public string FirstColumn {
+        public class TypeThree {
+            public string UserFullName {
                 get ;
                 set ;
             }
-            public string SecondColumn {
+            public string JobDesignation {
                 get ;
                 set ;
             }
-            public string ThirdColumn {
+            public string EntryTime {
                 get ;
                 set ;
             }

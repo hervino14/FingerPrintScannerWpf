@@ -181,6 +181,7 @@ namespace FingerPrintScanner.src.view {
             brr[ 5 ] = this.dtp1.Text ;
             brr[ 6 ] = this.tbx5.Text ;
             brr[ 7 ] = this.tbx6.Text ;
+            brr[ 8 ] = this.dtp2.Text ;
             this.uh.updateUser( brr ) ;
             System.Windows.MessageBox.Show( "User Created Successfully!" ) ;
             this.dashboard_obj.Visibility = Visibility.Visible ;

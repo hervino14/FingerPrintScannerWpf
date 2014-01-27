@@ -67,5 +67,13 @@ namespace FingerPrintScanner.src.controller {
             this.ubi.checkAndUpdateNewId( enroll_id ) ;
             this.uei.insert( arr ) ;
         }
+
+        public string[ , ] getAllData() {
+            return this.uei.getAllData() ;
+        }
+
+        public int getDataSize() {
+            return this.uei.getNumRows();
+        }
     }
 }

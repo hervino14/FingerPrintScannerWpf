@@ -11,30 +11,42 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using FingerPrintScanner.src.controller ;
 
 namespace FingerPrintScanner.src.view {
     /// <summary>
     /// Interaction logic for SearchInformation.xaml
     /// </summary>
     public partial class SearchInformation : Window {
-        private Dashboard dashboard_obj;
+        private Dashboard dashboard_obj ;
 
-        private NewUserAddition nua_obj;
-        private UpdateUserInformation uui_obj;        
-        private ExportDataToPdfCsv edpc_obj;
-        private PrintSearchResult psr_obj;
-        private RecoverAdminPassword rap_obj;
-        private UpdateAdminInformation uai_obj;
-        private UsageManual um_obj;
+        private NewUserAddition nua_obj ;
+        private UpdateUserInformation uui_obj ;        
+        private ExportDataToPdfCsv edpc_obj ;
+        private PrintSearchResult psr_obj ;
+        private RecoverAdminPassword rap_obj ;
+        private UpdateAdminInformation uai_obj ;
+        private UsageManual um_obj ;
+
+        private UserEntryHandler ueh_obj ;
 
         public SearchInformation() {
-            InitializeComponent();
-            this.dashboard_obj = null;
-            XamlEntityDesignerReference.designNewMenu( this.menu1 );
+            InitializeComponent() ;
+            this.dashboard_obj = null ;
+            XamlEntityDesignerReference.designNewMenu( this.menu1 ) ;
+
+            this.ueh_obj = new UserEntryHandler() ;
+
+            string[,] data = this.ueh_obj.getAllData() ;
+            string[] arr = new string[ 10 ] ;
+            arr[ 0 ] = "User Name" ;
+            arr[ 1 ] = "Job Designation";
+            arr[ 2 ] = "Entry Time";
+            DataGridViewLoader.setData( this.dgrid1 , arr , data , this.ueh_obj.getDataSize() , 3 ) ;            
         }
 
         private void Window_Closed( object sender , EventArgs e ) {
-            this.cleanObjects();
+            this.cleanObjects() ;
         }
 
         private void cleanObjects() {
