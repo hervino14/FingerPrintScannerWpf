@@ -1,0 +1,77 @@
+﻿<Window x:Class="FingerPrintScanner.src.view.SearchInformation"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Search User Information" Height="1100" Width="1100" WindowState="Maximized" Closed="Window_Closed">
+    <Grid x:Name="main_grid">
+        <Menu IsMainMenu="True" x:Name="menu1" Visibility="Visible" HorizontalAlignment="Left" Height="19" VerticalAlignment="Top" Width="290">
+            <MenuItem Header="Home" Click="homeClick">
+            </MenuItem>
+            <MenuItem Header="Attendance" >
+                <MenuItem Header="New User Addition" Click="newUserAdditionClick" >
+                    <MenuItem.Icon>
+                        <Image Source="../images/a.png" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="View User Details" Click="viewUserDetailsClick" >
+                    <MenuItem.Icon>
+                        <Image Source="../images/h.png" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="Update User Information" Click="updateUserInformationClick"  >
+                    <MenuItem.Icon>
+                        <Image Source="../images/b.png" />
+                    </MenuItem.Icon>
+                </MenuItem>
+            </MenuItem>
+            <MenuItem Header="Report" >
+                <MenuItem Header="Search Information" >
+                    <MenuItem.Icon>
+                        <Image Source="../images/c.png" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="Export data to PDF/CSV" Click="exportDataToPdfCsvClick">
+                    <MenuItem.Icon>
+                        <Image Source="../images/d.png" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="Print Search Result" Click="printSearchResultClick">
+                    <MenuItem.Icon>
+                        <Image Source="../images/e.png" />
+                    </MenuItem.Icon>
+                </MenuItem>
+            </MenuItem>
+            <MenuItem Header="Tools" >
+                <MenuItem Header="Recover Admin Password" Click="recoverAdminPaswordClick">
+                    <MenuItem.Icon>
+                        <Image Source="../images/f.png" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="Update Admin Information" Click="updateAdminInformationClick">
+                    <MenuItem.Icon>
+                        <Image Source="../images/g.png" />
+                    </MenuItem.Icon>
+                </MenuItem>
+            </MenuItem>
+            <MenuItem Header="Help" >
+                <MenuItem Header="Usage Manual" Click="usageManualClick" >
+                    <MenuItem.Icon>
+                        <Image Source="../images/h.jpg" />
+                    </MenuItem.Icon>
+                </MenuItem>
+            </MenuItem>
+            <MenuItem Header="Exit" Click="exitClick"/>
+        </Menu>
+
+
+        
+        <Label Name="lbl1" Content="Label" HorizontalAlignment="Left" Margin="23,64,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.649,2.784"/>
+        <DatePicker Name="dtp1" HorizontalAlignment="Left" Margin="119,67,0,0" VerticalAlignment="Top"/>
+        <Label Name="lbl2" Content="Label" HorizontalAlignment="Left" Margin="473,64,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.649,2.784"/>
+        <DatePicker Name="dtp2" HorizontalAlignment="Left" Margin="569,67,0,0" VerticalAlignment="Top"/>
+        <DataGrid Name="dgrid1" HorizontalAlignment="Left" Margin="23,160,0,0" VerticalAlignment="Top" Height="355" Width="944"/>        
+        <Label Visibility="Hidden" Name="lbl3" Content="Label" HorizontalAlignment="Left" Margin="1008,113,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.649,2.784"/>
+        <Button Name="btn3" Content="Search" HorizontalAlignment="Left" Margin="119,113,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="7.501,0.435" Click="btn3_Click"/>
+
+                
+    </Grid>
+</Window>
