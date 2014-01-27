@@ -40,6 +40,7 @@ namespace FingerPrintScanner.src.view {
         }
 
         private void setInformation() {
+            /*
             int i , sz , fl ;
             string[,] arr = this.uh.getAllUserInfo() ;
             sz = this.uh.getDataSize() ;
@@ -55,6 +56,7 @@ namespace FingerPrintScanner.src.view {
                 tbx1.Text = arr[ i , 1 ] ;
                 tbx2.Text = arr[ i , 2 ] ;
             }
+            */
         }
 
         private void Window_Closed( object sender , EventArgs e ) {
