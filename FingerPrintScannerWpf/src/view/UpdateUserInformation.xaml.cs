@@ -36,16 +36,22 @@ namespace FingerPrintScanner.src.view {
             InitializeComponent() ;
             this.dashboard_obj = null ;
             XamlEntityDesignerReference.designNewMenu( this.menu1 ) ;
+            this.initAllObjects() ;
             this.setInformation() ;
         }
 
+        private void initAllObjects() {
+            this.uh = new UserHandler() ;
+        }
+
         private void setInformation() {
-            /*
+            
             int i , sz , fl ;
             string[,] arr = this.uh.getAllUserInfo() ;
             sz = this.uh.getDataSize() ;
-            fl = 0 ;  
-            for( i = 0 ; i < sz ; i++ ) {
+            fl = 0 ;
+            System.Windows.Forms.MessageBox.Show( user_id ) ;
+            /*for( i = 0 ; i < sz ; i++ ) {
                 if( this.user_id.CompareTo( arr[ i , 0 ] ) == 0 ) {
                     fl = 1 ;
                     break ;
@@ -181,8 +187,7 @@ namespace FingerPrintScanner.src.view {
         }
 
         public void setUserId( string user_id_param ) {
-            this.user_id = user_id_param ;
-            System.Windows.Forms.MessageBox.Show( user_id ) ;
+            this.user_id = user_id_param ;            
         }
     }
 }
