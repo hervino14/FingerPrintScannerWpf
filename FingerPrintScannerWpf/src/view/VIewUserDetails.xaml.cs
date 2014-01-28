@@ -169,6 +169,12 @@ namespace FingerPrintScanner.src.view {
                     this.dashboard_obj.doStateTransition( 3 );
                 }
             }
+        }
+
+        private void Window_IsVisibleChanged( object sender , DependencyPropertyChangedEventArgs e ) {
+            if( this.Visibility == Visibility.Hidden ) {
+                this.uh.loadUserListToDataGrid( this.dgrid1 );
+            }
         }        
     }
 }

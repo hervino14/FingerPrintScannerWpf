@@ -16,7 +16,7 @@ namespace FingerPrintScanner.src.model {
         public string getASingleUserFullName( string user_id ) {
             this.setWhereClause( "user_id" , "1" , 6 , false ) ;
             string[ , ] arr = this.getAllData() ;
-            return arr[ 0 , 1 ] ;
+            return arr[ 0 , 1 ] + " " + arr[ 0 , 2 ] ;
         }
 
         public void setWhereClauseUserId( string user_id_param ) {
@@ -65,6 +65,7 @@ namespace FingerPrintScanner.src.model {
             this.setUpdateSetClause( "email_address" , brr[ 5 ] , true ) ;
             this.setUpdateSetClause( "current_address" , brr[ 6 ] , true ) ;
             this.setUpdateSetClause( "job_designation" , brr[ 7 ] , true ) ;
+            this.setUpdateSetClause( "join_date" , brr[ 8 ] , true );
             this.update() ;
         }
     }

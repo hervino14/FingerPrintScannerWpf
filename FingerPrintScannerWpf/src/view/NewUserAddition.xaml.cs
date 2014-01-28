@@ -177,8 +177,8 @@ namespace FingerPrintScanner.src.view {
             brr[ 1 ] = this.tbx1.Text ;
             brr[ 2 ] = this.tbx2.Text ;
             brr[ 3 ] = this.tbx3.Text ;
-            brr[ 4 ] = this.tbx4.Text ;
-            brr[ 5 ] = this.dtp1.Text ;
+            brr[ 4 ] = this.dtp1.Text;
+            brr[ 5 ] = this.tbx4.Text;
             brr[ 6 ] = this.tbx5.Text ;
             brr[ 7 ] = this.tbx6.Text ;
             brr[ 8 ] = this.dtp2.Text ;

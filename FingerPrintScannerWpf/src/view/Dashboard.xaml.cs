@@ -254,6 +254,12 @@ namespace FingerPrintScanner.src.view {
         public void exitClick( Object o , EventArgs ea ) {
             this.Close() ;
         }
+
+        private void Window_IsVisibleChanged( object sender , DependencyPropertyChangedEventArgs e ) {
+            if( this.Visibility == Visibility.Visible ) {
+                this.loadDataGridData() ;
+            }
+        }
     }
 }
 

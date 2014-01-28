@@ -14,6 +14,14 @@ using System.Windows.Shapes ;
 using FingerPrintScanner.src.view ;
 using FingerPrintScanner.src.controller ;
 
+
+
+
+
+//delete this 
+using FingerPrintScanner.src.model ;
+//delete this 
+
 namespace FingerPrintScannerWpf.src.view {
     /// <summary>
     /// Interaction logic for Landing.xaml
@@ -23,13 +31,32 @@ namespace FingerPrintScannerWpf.src.view {
 
         public Landing() {
             InitializeComponent() ;
-            this.initializeScreen() ;
-            this.init() ;
-            login_obj = new Login() ;
-            login_obj.setReference( this ) ;
+            try {
+                this.initializeScreen() ;
+                this.init() ;
+                login_obj = new Login() ;
+                login_obj.setReference( this ) ;
 
-            ComportController comc = new ComportController() ;
-            comc.startListening() ;
+                ComportController comc = new ComportController() ;
+                comc.startListening() ;
+            }
+            catch( Exception e ) {
+                MessageBox.Show( e.StackTrace.ToString() ) ;
+            }
+            
+            /*
+            UserBasicInfo ubiObj = new UserBasicInfo() ;
+            string[,] arr = ubiObj.getAllData() ;
+            int i , sz ;
+            sz = ubiObj.getNumRows() ;
+            for( i = 0 ; i < sz ; i++ ) {
+                System.Windows.MessageBox.Show( arr[ i , 0 ] ) ;
+            }
+            */
+            /*
+            DbConnection dc = new DbConnection() ;
+            dc.getDataSet( "select * from user_basic_info ; " ) ;
+            */
         }
 
         private void init() {

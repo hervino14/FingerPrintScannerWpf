@@ -57,7 +57,7 @@ namespace FingerPrintScanner.src.controller {
                 SqlDataAdapter adp = new SqlDataAdapter( cmd ) ;                
                 adp.Fill( ds ) ;                
             }
-            catch( Exception e ) {
+            catch( Exception e ) {                
                 this.error_msg += e.ToString() + "\n" ;
             }
             this.closeConnection() ;
@@ -78,9 +78,10 @@ namespace FingerPrintScanner.src.controller {
                 cmd = new SqlCommand( sql , this.con_var ) ;
                 a = cmd.ExecuteNonQuery();
             }
-            catch( Exception e ) {                
+            catch( Exception e ) {
+                //System.Windows.MessageBox.Show( e.ToString() ) ;
                 this.error_msg += e.ToString() + "\n" ;                
-            }                  
+            }
             this.closeConnection() ;
             return a ;
         }

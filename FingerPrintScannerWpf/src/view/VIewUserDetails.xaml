@@ -1,7 +1,7 @@
 ﻿<Window x:Class="FingerPrintScanner.src.view.VIewUserDetails"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="View User Details" Height="1100" Width="1100" WindowState="Maximized" Closed="Window_Closed">
+        Title="View User Details" Height="1100" Width="1100" WindowState="Maximized" Closed="Window_Closed" IsVisibleChanged="Window_IsVisibleChanged">
     <Grid x:Name="main_grid">
         <Menu IsMainMenu="True" x:Name="menu1" Visibility="Visible" HorizontalAlignment="Left" Height="19" VerticalAlignment="Top" Width="290">
             <MenuItem Header="Home" Click="homeClick">

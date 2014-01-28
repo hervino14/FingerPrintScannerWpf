@@ -69,7 +69,13 @@ namespace FingerPrintScanner.src.controller {
         }
 
         public string[ , ] getAllData() {
-            return this.uei.getAllData() ;
+            int i , sz ;
+            sz = this.uei.getNumRows() ;
+            string[,] arr = this.uei.getAllData() ;
+            for( i = 0 ; i < sz ; i++ ) {
+                arr[ i , 0 ] = this.ubi.getASingleUserFullName( arr[ i , 0 ] ) ;
+            }
+            return arr ;
         }
 
         public int getDataSize() {

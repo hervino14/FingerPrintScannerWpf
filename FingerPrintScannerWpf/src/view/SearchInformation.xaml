@@ -68,7 +68,7 @@
         <DatePicker Name="dtp1" HorizontalAlignment="Left" Margin="119,67,0,0" VerticalAlignment="Top"/>
         <Label Name="lbl2" Content="Label" HorizontalAlignment="Left" Margin="473,64,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.649,2.784"/>
         <DatePicker Name="dtp2" HorizontalAlignment="Left" Margin="569,67,0,0" VerticalAlignment="Top"/>
-        <DataGrid Name="dgrid1" HorizontalAlignment="Left" Margin="23,160,0,0" VerticalAlignment="Top" Height="355" Width="944"/>        
+        <DataGrid Name="dgrid1" HorizontalAlignment="Left" Margin="23,160,0,0" VerticalAlignment="Top" Height="355" Width="944" IsReadOnly="True"/>        
         <Label Visibility="Hidden" Name="lbl3" Content="Label" HorizontalAlignment="Left" Margin="1008,113,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.649,2.784"/>
         <Button Name="btn3" Content="Search" HorizontalAlignment="Left" Margin="119,113,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="7.501,0.435" Click="btn3_Click"/>
 

@@ -61,7 +61,7 @@ namespace FingerPrintScanner.src.controller {
                     list_data.Add( new TypeThree() {
                         UserFullName = data[ i , 0 ] ,
                         JobDesignation = data[ i , 1 ] ,
-                        EntryTime = data[ i , 2 ] 
+                        EntryTime = data[ i , 2 ]
                     } ) ;
                     dgv.ItemsSource = list_data ;
                 }

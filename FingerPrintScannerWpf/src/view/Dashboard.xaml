@@ -1,7 +1,7 @@
 ﻿<Window x:Class="FingerPrintScanner.src.view.Dashboard"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Dashboard" Height="1100" Width="1100" WindowState="Maximized" Closed="Window_Closed">
+        Title="Dashboard" Height="1100" Width="1100" WindowState="Maximized" Closed="Window_Closed" IsVisibleChanged="Window_IsVisibleChanged">
     <Grid Name="main_grid" Margin="0,0,-234,0">
         <Menu IsMainMenu="True" x:Name="menu1" Visibility="Visible" HorizontalAlignment="Left" Height="19" VerticalAlignment="Top" Width="290">
             <MenuItem Header="Home" Click="homeClick">
@@ -64,7 +64,7 @@
 
 
         <Label Content="List of latest 10 entry time:" HorizontalAlignment="Left" Margin="28,35,0,0" VerticalAlignment="Top"/>
-        <DataGrid x:Name="dgrid1" HorizontalAlignment="Left" Margin="28,81,0,0" VerticalAlignment="Top" Height="460" Width="587"/>
+        <DataGrid x:Name="dgrid1" HorizontalAlignment="Left" Margin="28,81,0,0" VerticalAlignment="Top" Height="460" Width="587" IsReadOnly="True"/>
 
     </Grid>
 </Window>
